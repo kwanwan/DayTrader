@@ -1,0 +1,85 @@
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>tests</artifactId>
+  <dependencies>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.11</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>net.sourceforge.jwebunit</groupId>
+          <artifactId>jwebunit-htmlunit-plugin</artifactId>
+          <version>3.2</version>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+ 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+        <phase>test</phase>
+        <goals>
+          <goal>report-only</goal>
+        </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  
+	<extensions>
+		<extension>
+			<artifactId>wagon-webdav-jackrabbit</artifactId>
+			<groupId>org.apache.maven.wagon</groupId>
+			<version>2.2</version>
+		</extension>
+	</extensions>
+</build>
+ 
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.6</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report-only</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>  
+ 
+  <groupId>org.apache.geronimo.daytrader</groupId>
+  <version>3.0.0</version>
+ 
+  <distributionManagement>
+    <repository>
+	   <uniqueVersion>false</uniqueVersion>
+	   <id>DeveloperCloud</id>
+	   <name>Developer Cloud Repository</name>
+	   <url>dav:https://developer.em2.oraclecloud.com/profile/developer74966-gboracle26828/s/developer74966-gboracle26828_daytrader_969/maven/</url>
+	   <layout>default</layout>
+    </repository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <!-- Server credential ID defined in $HOME/.m2/settings.xml -->
+	   <id>82ecaffd327364ec4393933f0e52d86c</id>
+	   <url>https://developer.em2.oraclecloud.com/profile/developer74966-gboracle26828/s/developer74966-gboracle26828_daytrader_969/maven/</url>
+    </repository>
+  </repositories>
+</project>

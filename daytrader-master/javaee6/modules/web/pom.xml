@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>modules</artifactId>
+    <groupId>org.apache.geronimo.daytrader.javaee6</groupId>
+    <version>3.0.0</version>
+  </parent>
+  
+  <groupId>org.apache.geronimo.daytrader.javaee6</groupId>
+  <artifactId>web</artifactId>
+  
+  <name>DayTrader :: Java EE 6 :: Modules - Web</name>
+  <description>Daytrader Java EE 6 Web Module</description>
+  <packaging>war</packaging>
+  
+  <dependencies>
+    <dependency>
+                <groupId>org.apache.geronimo.bundles</groupId>
+                <artifactId>myfaces-bundle</artifactId>
+                <scope>provided</scope>
+            </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.daytrader.javaee6</groupId>
+            <artifactId>utils</artifactId>            
+            <type>ejb</type>
+            <version>3.0.0</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.apache.geronimo.daytrader.javaee6</groupId>
+            <artifactId>entities</artifactId>            
+            <type>ejb</type>
+            <version>3.0.0</version>
+        </dependency>
+               
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jpa_2.0_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+		<version>1.5</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-codec</groupId>
+		<artifactId>commons-codec</artifactId>
+		<version>1.4</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>3.2</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-digester</groupId>
+		<artifactId>commons-digester</artifactId>
+		<version>2.1</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.1</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-logging</groupId>
+		<artifactId>commons-logging</artifactId>
+		<version>1.0.4</version>
+	</dependency>
+	<dependency>
+		<groupId>dom4j</groupId>
+		<artifactId>dom4j</artifactId>
+		<version>1.6.1</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.ejb</groupId>
+		<artifactId>ejb-api</artifactId>
+		<version>3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate.common</groupId>
+		<artifactId>hibernate-commons-annotations</artifactId>
+		<version>4.0.1.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>4.2.7.SP1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>4.2.7.SP1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-envers</artifactId>
+		<version>4.2.7.SP1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-infinispan</artifactId>
+		<version>4.2.7.SP1</version>
+	 </dependency>
+	<dependency>
+		<groupId>org.jboss.logging</groupId>
+		<artifactId>jboss-logging</artifactId>
+		<version>3.1.2.GA</version>
+	</dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-ejb_3.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jms_1.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-annotation_1.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-servlet_3.0_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jsp_2.2_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+
+        <!-- Removed per DAYTRADER-7 due to interop issues on commercial AppServers 
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>jspc-maven-plugin</artifactId>
+            <version>1.4.4</version>
+            <scope>provided</scope>
+        </dependency>
+        -->
+        <!--
+        david sanz on May 26th, 2015
+        Added jstl dependency (provided) so that web module is rightly built from within Eclipse
+        -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>   
+        <plugins>
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <!--
+                david sanz on May 26th, 2015
+                Added <version>2.1</version> to avoid
+                Cannot construct org.apache.maven.plugin.war.util.WebappStructure as it does not have a no-args constructor
+                -->
+                <version>2.1</version>
+                <configuration>                    
+                    <resources>
+                        <resource implementation="org.apache.maven.model.Resource">
+                            <filtering>true</filtering>
+                            <directory>
+                                ${basedir}/src/main/webapp/WEB-INF
+                            </directory>
+                            <includes>
+                                <include>web.xml</include>
+                            </includes>
+                        </resource>
+                    </resources>
+                    <webResources>
+                        <resource>
+                            <directory>${project.build.outputDirectory}</directory>
+                            <includes>
+                                <include>META-INF/LICENSE*</include>
+                                <include>META-INF/NOTICE*</include>
+                                <include>META-INF/DISCLAIMER*</include>
+                            </includes>
+                        </resource>
+                        <resource>
+                            <directory>
+                                ${basedir}/src/main/resources
+                            </directory>
+                            <targetPath>docs</targetPath>
+                            <filtering>true</filtering>                            
+                            <includes>
+                                <include>**/tradeversion.html</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>   
+            </plugins> 
+    </build>
+</project>
