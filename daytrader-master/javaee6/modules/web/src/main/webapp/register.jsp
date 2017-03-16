@@ -55,7 +55,7 @@ String results =   (String) request.getAttribute ( "results" );
     <TBODY>
         <TR>
             <TD width="2%" bgcolor="#e7e4e7"></TD>
-            <TD width="98%" colspan="8"><B>Register</B>
+            <TD width="95%" colspan="8"><B>Register</B>
             <HR>
             </TD>
         </TR>
