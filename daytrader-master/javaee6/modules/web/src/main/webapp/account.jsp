@@ -37,7 +37,7 @@
 <TABLE height="54">
     <TBODY>
         <TR>
-            <TD bgcolor="#ff0000" align="left" width="640" height="10" colspan=5><B><FONT
+            <TD bgcolor="#c93333" align="left" width="640" height="10" colspan=5><B><FONT
                 color="#ffffff">DayTrader Account</FONT></B></TD>
             <TD align="center" bgcolor="#000000" width="100" height="10"><FONT
                 color="#ffffff"><B>DayTrader</B></FONT></TD>
