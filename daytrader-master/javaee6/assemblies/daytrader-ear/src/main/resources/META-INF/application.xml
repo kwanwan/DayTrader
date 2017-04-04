@@ -19,11 +19,5 @@
   <application-name>daytrader</application-name>
   <description>DayTrader Stock Trading Performance Benchmark Sample</description>
   <display-name>DayTrader EAR</display-name>
-  <module>
-    <web>
-      <web-uri>web.war</web-uri>
-      <context-root>/daytrader</context-root>
-    </web>
-  </module>
   <library-directory>lib</library-directory>
 </application>
