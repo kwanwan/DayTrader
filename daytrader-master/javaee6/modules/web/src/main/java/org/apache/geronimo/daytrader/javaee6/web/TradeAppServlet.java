@@ -185,8 +185,8 @@ public class TradeAppServlet extends HttpServlet {
             String password = req.getParameter("password");
             String cpassword = req.getParameter("cpassword");
             String fullName = req.getParameter("fullname");
-            String address = req.getParameter("creditcard");
-            String creditcard = req.getParameter("address");
+            String address = req.getParameter("address");
+            String creditcard = req.getParameter("creditcard");
             String email = req.getParameter("email");
             tsAction.doAccountUpdate(ctx, req, resp, userID,
                     password == null ? "" : password.trim(),
