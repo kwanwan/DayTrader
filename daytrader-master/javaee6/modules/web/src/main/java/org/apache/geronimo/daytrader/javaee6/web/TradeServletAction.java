@@ -170,7 +170,7 @@ public class TradeServletAction {
             doUpdate = false;
         }
         AccountProfileDataBean accountProfileData = new AccountProfileDataBean(
-                userID, password, fullName, address, email, creditcard);
+                userID, password, fullName, creditcard, email, address);
         try {
             if (doUpdate) {
                 accountProfileData = tAction
