@@ -199,8 +199,8 @@ public class TradeScenarioServlet extends HttpServlet {
                     String creditcard = "rndCC";
                     dispPath = tasPathPrefix + "update_profile&fullname=" + fullName + 
                         "&password=" + password + "&cpassword=" + password +                     
-                        "&address=" + address +    "&email=" + email + 
-                        "&creditcard=" +  creditcard;
+                        "&address=" + creditcard +    "&email=" + email + 
+                        "&creditcard=" +  address;
                     ctx.getRequestDispatcher(dispPath).include(req, resp);
                     break;
                 case 'h' : //home
