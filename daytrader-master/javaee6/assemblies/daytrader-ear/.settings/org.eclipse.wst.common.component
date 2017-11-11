@@ -2,5 +2,14 @@
     <wb-module deploy-name="daytrader-ear-3.0.0">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/resources" tag="defaultRootSource"/>
+        <dependent-module archiveName="utils.jar" deploy-path="/lib" handle="module:/resource/utils/utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="entities.jar" deploy-path="/lib" handle="module:/resource/entities/entities">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="web.war" deploy-path="/" handle="module:/resource/web/web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>
